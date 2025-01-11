@@ -1,3 +1,4 @@
 I am going to create 2 spring boot application name Kafka Producer & kafka Consumer
 I will push messages from Producer & Kafka Consumer will listen those messages
 ZooKeeper & kafka Server will intermediate between Producer & Consumer
+I will demostrate Kafka Producer & Kafka Consumer
