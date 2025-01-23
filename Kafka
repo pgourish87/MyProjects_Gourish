@@ -4,10 +4,13 @@ ZooKeeper & kafka Server will intermediate between Producer & Consumer
 I will demonstrate Kafka Producer & Kafka Consumer
 This is my test file.
 
-<<Steps to start Zoo-keeper & kafka server>>
+<<Steps to start Zoo-keeper & kafka server & create a topic>>
 1:open cmd in c drive where kafka has been installed
 2: C:\kafka_2.13-3.8.0> .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 3: Zoo keeper start with default port: 2181
 4: start the kafka server:>
 5: C:\kafka_2.13-3.8.0>.\bin\windows\kafka-server-start.bat .\config\server.properties
 6: kafka server/broker starts with default port : 9092
+7: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --create --topic javatechie-topic --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+8: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --list
+9: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic javatechie-topic
