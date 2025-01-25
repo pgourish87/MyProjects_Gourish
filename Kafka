@@ -14,3 +14,6 @@ This is my test file.
 7: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --create --topic javatechie-topic --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
 8: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --list
 9: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic javatechie-topic
+10:To start Producer & cosumer app from cmd line:>>>
+11: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic javatechie-topic
+12: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic javatechie-topic --from-beginning
