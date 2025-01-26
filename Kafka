@@ -4,7 +4,7 @@ ZooKeeper & kafka Server will intermediate between Producer & Consumer
 I will demonstrate Kafka Producer & Kafka Consumer
 This is my test file.
 
-<<Steps to start Zoo-keeper & kafka server & create a topic>>
+<<Steps to start Zoo-keeper & kafka server & create a topic using open source apache kafka>>
 1:open cmd in c drive where kafka has been installed
 2: C:\kafka_2.13-3.8.0> .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 3: Zoo keeper start with default port: 2181
@@ -17,3 +17,19 @@ This is my test file.
 10:To start Producer & cosumer app from cmd line:>>>
 11: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic javatechie-topic
 12: PS C:\kafka_2.13-3.8.0> .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic javatechie-topic --from-beginning
+
+<<Steps to start Zoo-keeper & kafka server & create a topic using Confluent kafka>>
+1: PS C:\confluent-7.8.0> .\bin\windows\zookeeper-server-start.bat .\etc\kafka\zookeeper.properties
+2: PS C:\confluent-7.8.0> .\bin\windows\kafka-server-start.bat .\etc\kafka\server.properties
+3: then remaining procedure would be same as per open source apache kafka.. creating topic, running producer & consumer app
+4: start pushing messages from producer to topic & consuming the same messages from consumer app. 
+
+:>We can start Kafka server without running Zoo-keeper to store all metadata cluster information.
+:>Apache Kafka can be started using KRaft or ZooKeeper. To get started with either configuration follow one of the sections below but not both.
+:>Kafka with KRaft
+:>Generate a Cluster UUID
+ KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
+:>Format Log Directories
+ bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/kraft/reconfig-server.properties
+:>Start the Kafka Server
+ bin/kafka-server-start.sh config/kraft/reconfig-server.properties
