@@ -1,0 +1,25 @@
+In order to run shell scripts cmds:>
+Refer the Youtube Video: https://www.youtube.com/watch?v=EiMi11slVnY&list=PLVz2XdJiJQxwpWGoNokohsSW2CysI6lDc&index=7&ab_channel=JavaTechie
+1: make sure to run docker containers
+2: C:\Users\91991>docker exec -it kafka /bin/sh
+3: ls
+4: cd opt
+5: ls
+6: cd kafka_2.13-2.8.1
+7: cd bin
+8: ls
+9:
+connect-distributed.sh        kafka-dump-log.sh                    kafka-storage.sh
+connect-mirror-maker.sh       kafka-features.sh                    kafka-streams-application-reset.sh
+connect-standalone.sh         kafka-leader-election.sh             kafka-topics.sh
+kafka-acls.sh                 kafka-log-dirs.sh                    kafka-verifiable-consumer.sh
+kafka-broker-api-versions.sh  kafka-metadata-shell.sh              kafka-verifiable-producer.sh
+kafka-cluster.sh              kafka-mirror-maker.sh                trogdor.sh
+kafka-configs.sh              kafka-preferred-replica-election.sh  windows
+kafka-console-consumer.sh     kafka-producer-perf-test.sh          zookeeper-security-migration.sh
+kafka-console-producer.sh     kafka-reassign-partitions.sh         zookeeper-server-start.sh
+kafka-consumer-groups.sh      kafka-replica-verification.sh        zookeeper-server-stop.sh
+kafka-consumer-perf-test.sh   kafka-run-class.sh                   zookeeper-shell.sh
+kafka-delegation-tokens.sh    kafka-server-start.sh
+kafka-delete-records.sh       kafka-server-stop.sh
+kafka-dump-configs.sh         kafka-shell.sh
