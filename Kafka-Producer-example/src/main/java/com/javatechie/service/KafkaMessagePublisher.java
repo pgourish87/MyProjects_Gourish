@@ -13,7 +13,7 @@ public class KafkaMessagePublisher {
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     public void sendMessageToTopic(String message) {
-        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send("javatechie-demo3", message);
+        CompletableFuture<SendResult<String, Object>> future = kafkaTemplate.send("Vihaan-topic", message);
         future.whenComplete((result, exception) -> {
             if (exception == null) {
                 System.out.println("Sent message=[" + message + "] with offset=[" + result.getRecordMetadata().offset() + "]");
