@@ -23,3 +23,9 @@ kafka-consumer-perf-test.sh   kafka-run-class.sh                   zookeeper-she
 kafka-delegation-tokens.sh    kafka-server-start.sh
 kafka-delete-records.sh       kafka-server-stop.sh
 kafka-dump-configs.sh         kafka-shell.sh
+
+For serilizing & deserilizing data:>
+1: Configuration done in application.yml file
+2: Configuration done in Java configuration file
+3: I have used java serialization & java deserialization for Object in application.yml file & committed the code.
+4: Due to some local issue, I have commented Configuration done in Java configuration file.
